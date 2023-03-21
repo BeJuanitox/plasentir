@@ -1,37 +1,32 @@
-.headerBar, .menuAction, .menuButton {
+$header-bg: #212121;
+
+.headerBar,
+.example-flex-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .headerBar {
   width: 100%;
   height: 90px;
-  background-color: black;
-  justify-content: space-between;
+  background-color: $header-bg;
+  flex-direction: row;
+  align-items: center;
 
   .logoLetters {
-    width: 300px;
+    width: 200px;
   }
 
-  .menuAction {
-    width: 25%;
-    color: white;
-    justify-content: space-evenly;
-    gap: 10px;
+  .example-spacer {
+    flex: 1 1 auto;
+  }
 
-    .menuTittle {
-      font-weight: 100;
-      font-size: 20px;
+  .example-flex-container {
+    flex-wrap: wrap;
+    gap: 15px;
+
+    .aboutUs {
+      font-size: 16px;
     }
-  }
-
-  .menuButton {
-    justify-content: center;
-    gap: 5px;
-  }
-
-  .icoShoppingCart, .menuButton, .menuTittle{
-    cursor: pointer;
   }
 }
