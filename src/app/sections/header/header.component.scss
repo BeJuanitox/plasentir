@@ -1,0 +1,32 @@
+$header-bg: #212121;
+
+.headerBar,
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerBar {
+  width: 100%;
+  height: 90px;
+  background-color: $header-bg;
+  flex-direction: row;
+  align-items: center;
+
+  .logoLetters {
+    width: 200px;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .flex-container {
+    flex-wrap: wrap;
+    gap: 15px;
+
+    .aboutUs {
+      font-size: 16px;
+    }
+  }
+}
