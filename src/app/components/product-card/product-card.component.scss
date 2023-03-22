@@ -1,0 +1,37 @@
+@import '/src/styles/colors';
+
+.card {
+  border-radius: 10px;
+  height: auto;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 240px;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .image {
+      width: 150px;
+      height: 150px;
+    }
+
+    .description {
+      margin: 0;
+      text-align: center;
+    }
+
+    .price {
+      color: $rose-bud;
+      font-size: x-large;
+      font-weight: bolder;
+    }
+  }
+
+  .action {
+    background-color: $rose-bud;
+    color: $black;
+    width: 100%;
+  }
+}
