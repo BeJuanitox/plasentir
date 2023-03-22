@@ -1,0 +1,17 @@
+<mat-card class="card" color="">
+  <mat-card-content class="content">
+    <img class="image" [src]="product.image" />
+    <h2>{{ product.name }}</h2>
+    <p class="description">{{ product.description }}</p>
+    <h3 class="price">{{ product.price | currency }}</h3>
+  </mat-card-content>
+  <mat-card-actions>
+    <button 
+      mat-flat-button 
+      class="action"
+      (click)="addToCart()"
+      >
+      Agregar al carrito
+    </button>
+  </mat-card-actions>
+</mat-card>

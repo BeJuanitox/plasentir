@@ -1,4 +1,4 @@
-$header-bg: #212121;
+@import '/src/styles/colors';
 
 .headerBar,
 .example-flex-container {
@@ -9,11 +9,12 @@ $header-bg: #212121;
 .headerBar {
   width: 100%;
   height: 90px;
-  background-color: $header-bg;
+  background-color: $mine-shaft;
   flex-direction: row;
   align-items: center;
 
   .logoLetters {
+    margin-left: 20px;
     width: 200px;
   }
 
