@@ -3,7 +3,7 @@
     <img class="image" [src]="product.image" />
     <h2>{{ product.name }}</h2>
     <p class="description">{{ product.description }}</p>
-    <h3 class="price">$ {{ product.price }}</h3>
+    <h3 class="price">{{ product.price | currency }}</h3>
   </mat-card-content>
   <mat-card-actions>
     <button 

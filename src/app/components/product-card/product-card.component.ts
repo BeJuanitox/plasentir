@@ -12,7 +12,7 @@ export class ProductCardComponent {
     code: '2020',
     name: 'Test',
     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias atque inventore',
-    price: '200.3',
+    price: 200.3,
     image: 'https://cdn-icons-png.flaticon.com/512/4416/4416740.png'
   }
 
