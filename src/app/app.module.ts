@@ -11,12 +11,14 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { AppComponent } from './app.component';
+import { FooterComponent } from './sections/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
