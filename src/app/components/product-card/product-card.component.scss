@@ -17,21 +17,38 @@
       height: 150px;
     }
 
+    .name {
+      text-align: center;
+      overflow-y: scroll;
+      height: 100px;
+    }
+    
     .description {
       margin: 0;
+      overflow-y: scroll;
       text-align: center;
+      height: 80px;
     }
 
     .price {
       color: $rose-bud;
       font-size: x-large;
       font-weight: bolder;
+      margin-top: 10px;
     }
   }
 
   .action {
-    background-color: $rose-bud;
-    color: $black;
     width: 100%;
+  }
+
+  .enable {
+    background-color: $rose-bud;
+    color: $tundora;
+  }
+  
+  .disable {
+    background-color: $tundora;
+    color: $rose-bud;
   }
 }

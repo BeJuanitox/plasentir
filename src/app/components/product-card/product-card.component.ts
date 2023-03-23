@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from '../../interfaces/product.interface';
 
 @Component({
@@ -14,9 +14,11 @@ export class ProductCardComponent {
     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias atque inventore',
     price: 200.3,
     image: 'https://cdn-icons-png.flaticon.com/512/4416/4416740.png'
-  }
+  };
+  @Input() addedToCart: boolean = false;
+  @Output() onAddToCart: EventEmitter<Product> = new EventEmitter();
 
   addToCart(): void {
-    console.log(`Add ${this.product.code} to cart`);
+    this.onAddToCart.emit(this.product);
   }
 }
