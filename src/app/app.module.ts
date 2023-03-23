@@ -6,6 +6,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { AppRoutingModule } from './app-routing.module';
 
 import { NgMaterialModule } from './ng-material/ng-material.module';
 
@@ -14,12 +16,14 @@ import { NgMaterialModule } from './ng-material/ng-material.module';
     AppComponent,
     HeaderComponent,
     ProductCardComponent,
-    FooterComponent
+    FooterComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    NgMaterialModule
+    NgMaterialModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
