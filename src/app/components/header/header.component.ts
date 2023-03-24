@@ -16,10 +16,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   constructor(
     private readonly shoppingCartService: ShoppingCartService,
-    public dialog: MatDialog
+    public readonly dialog: MatDialog
   ) { }
   
   ngOnInit(): void {
+    this.shoppingCartService.initializeShoppingCart();
     this.shoppingCartService.subject$.pipe(
       takeUntil(this.unsubscribe$)
     ).subscribe(() => {
@@ -33,7 +34,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   showShoppingCart(): void {
-    console.log(this.shoppingCartService.shoppingCart);
     this.dialog.open(ShoppingCartModalComponent);
   }
 }
