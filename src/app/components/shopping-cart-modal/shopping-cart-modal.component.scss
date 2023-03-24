@@ -1,0 +1,39 @@
+.modal {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 40vh;
+  min-width: 400px;
+
+  .list {
+    list-style: none;
+    padding: 0;
+
+    .item {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      height: auto;
+      width: 100%;
+      .image {
+        width: 50px;
+      }
+
+      .name {
+        text-align: left;
+        width: 190px;
+      }
+    }
+
+    .total {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  .empty-cart {
+    text-align: center;
+    display: flex;
+  }
+}

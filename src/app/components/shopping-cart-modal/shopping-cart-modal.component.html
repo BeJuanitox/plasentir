@@ -1,0 +1,23 @@
+<section class="modal">
+  <ul class="list" *ngIf="itemsInCart; else noItemsTemplate">
+    <ng-container *ngFor="let item of shoppingCartItems">
+      <li class="item">
+        <img class="image" src="https://cdn-icons-png.flaticon.com/512/4416/4416740.png" [alt]="item.code">
+        <p class="name">{{item.name}}</p>
+        <p>{{item.price | currency}}</p>
+        <button mat-button (click)="removeItem(item)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </li>
+    </ng-container>
+    <div class="total">
+      <h2>Total: {{ total | currency}}</h2>
+    </div>
+  </ul>
+  <ng-template #noItemsTemplate>
+    <!-- <div class="empty-cart"> -->
+      <h1>No hay items agregados al carrito de compras</h1>
+      <h1>:(</h1>
+    <!-- </div> -->
+  </ng-template>
+</section>
