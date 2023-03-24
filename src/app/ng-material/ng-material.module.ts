@@ -11,8 +11,7 @@ import { MatListModule } from '@angular/material/list';
 @NgModule({
   declarations: [],
   exports: [
-    MatToolbarModule,
-    MatIconModule,
+    MatButtonModule,
     MatCardModule,
     MatButtonModule,
     MatBadgeModule,
