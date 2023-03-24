@@ -8,7 +8,8 @@
         <span 
           [matBadge]="shoppingCartCounter"
           [matBadgeHidden]="shoppingCartCounter === 0"
-          matBadgeColor="warn" 
+          matBadgeColor="warn"
+          (click)="showShoppingCart()"
           class="icoShoppingCart material-symbols-outlined"
         >
         shopping_cart

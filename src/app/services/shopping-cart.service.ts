@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { Product } from '../interfaces/product.interface';
 
 @Injectable({
@@ -7,15 +7,16 @@ import { Product } from '../interfaces/product.interface';
 })
 export class ShoppingCartService {
 
-  subject$: Subject<string> = new Subject();
+  subject$: BehaviorSubject<string> = new BehaviorSubject('');
   shoppingCart: Product[] = [];
 
-  addToCart(product: Product): void {
+  addRemoveToCart(product: Product): void {
     if(this.shoppingCart.includes(product)) {
-      return;
+      this.shoppingCart = this.shoppingCart.filter(productItem => productItem.code !== product.code);
+    }else {
+      this.shoppingCart.push(product);
     }
     
-    this.shoppingCart.push(product);
     this.subject$.next(product.code);
   }
 

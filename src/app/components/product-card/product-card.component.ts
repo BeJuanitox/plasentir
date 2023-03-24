@@ -16,9 +16,9 @@ export class ProductCardComponent {
     image: 'https://cdn-icons-png.flaticon.com/512/4416/4416740.png'
   };
   @Input() addedToCart: boolean = false;
-  @Output() onAddToCart: EventEmitter<Product> = new EventEmitter();
+  @Output() onAddRemoveToCart: EventEmitter<Product> = new EventEmitter();
 
-  addToCart(): void {
-    this.onAddToCart.emit(this.product);
+  addRemoveToCart(): void {
+    this.onAddRemoveToCart.emit(this.product);
   }
 }
