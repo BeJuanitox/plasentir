@@ -19,13 +19,13 @@
 
     .name {
       text-align: center;
-      overflow-y: scroll;
+      overflow-y: hidden;
       height: 100px;
     }
     
     .description {
       margin: 0;
-      overflow-y: scroll;
+      overflow-y: hidden;
       text-align: center;
       height: 80px;
     }

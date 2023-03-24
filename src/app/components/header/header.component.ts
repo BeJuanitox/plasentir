@@ -1,6 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ShoppingCartService } from '../../services/shopping-cart.service';
+import { MatDialog } from '@angular/material/dialog';
 import { Subject, takeUntil } from 'rxjs';
+import { ShoppingCartService } from '../../services/shopping-cart.service';
+import { ShoppingCartModalComponent } from '../shopping-cart-modal/shopping-cart-modal.component';
 
 @Component({
   selector: 'app-header',
@@ -12,9 +14,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
   shoppingCartCounter: number = 0;
   unsubscribe$: Subject<null> = new Subject();
 
-  constructor(private readonly shoppingCartService: ShoppingCartService) { }
+  constructor(
+    private readonly shoppingCartService: ShoppingCartService,
+    public readonly dialog: MatDialog
+  ) { }
   
   ngOnInit(): void {
+    this.shoppingCartService.initializeShoppingCart();
     this.shoppingCartService.subject$.pipe(
       takeUntil(this.unsubscribe$)
     ).subscribe(() => {
@@ -25,5 +31,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.unsubscribe$.next(null);
     this.unsubscribe$.complete();
+  }
+
+  showShoppingCart(): void {
+    this.dialog.open(ShoppingCartModalComponent);
   }
 }

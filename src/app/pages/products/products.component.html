@@ -3,7 +3,7 @@
     <app-product-card 
       [product]="product" 
       [addedToCart]="isOnCart(product.code)"
-      (onAddToCart)="addToCart($event)"
+      (onAddRemoveToCart)="addRemoveToCart($event)"
     ></app-product-card>
   </ng-container>
 </section>

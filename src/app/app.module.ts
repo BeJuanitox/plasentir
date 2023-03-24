@@ -10,6 +10,7 @@ import { ProductsComponent } from './pages/products/products.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { NgMaterialModule } from './ng-material/ng-material.module';
+import { ShoppingCartModalComponent } from './components/shopping-cart-modal/shopping-cart-modal.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NgMaterialModule } from './ng-material/ng-material.module';
     HeaderComponent,
     ProductCardComponent,
     FooterComponent,
-    ProductsComponent
+    ProductsComponent,
+    ShoppingCartModalComponent
   ],
   imports: [
     BrowserModule,

@@ -8,11 +8,10 @@
   <mat-card-actions>
     <button 
       mat-flat-button 
-      [disabled]="addedToCart"
       [ngClass]="addedToCart ? 'action disable' : 'action enable'"
-      (click)="addToCart()"
+      (click)="addRemoveToCart()"
       >
-      {{ addedToCart ? 'Agregado al carrito' : 'Agregar al carrito' }}
+      {{ addedToCart ? 'Remover del carrito' : 'Agregar al carrito' }}
     </button>
   </mat-card-actions>
 </mat-card>
