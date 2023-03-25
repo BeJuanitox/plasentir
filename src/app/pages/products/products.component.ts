@@ -15,7 +15,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
 
   shoppingCartList: Product[] = [];
   unsubscribe$: Subject<null> = new Subject();
-  products: Observable<{[key: string]: any}> = new Observable();
+  products: Observable<{[key: string]: Product}> = new Observable();
 
   constructor(private readonly shoppingCartService: ShoppingCartService,
               private readonly productService: ProductService
