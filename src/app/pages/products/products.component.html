@@ -1,8 +1,8 @@
 <section class="products">
-  <ng-container *ngFor="let product of productsList">
+  <ng-container *ngFor="let product of products | async | keyvalue">
     <app-product-card 
-      [product]="product" 
-      [addedToCart]="isOnCart(product.code)"
+      [product]="product.value" 
+      [addedToCart]="isOnCart(product.value.code)"
       (onAddRemoveToCart)="addRemoveToCart($event)"
     ></app-product-card>
   </ng-container>

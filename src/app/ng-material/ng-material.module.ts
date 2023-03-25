@@ -16,7 +16,10 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatBadgeModule,
     MatDialogModule,
-    MatListModule
+    MatListModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatBadgeModule
   ]
 })
 export class NgMaterialModule { }
