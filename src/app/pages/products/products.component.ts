@@ -3,7 +3,9 @@ import { Subject, takeUntil } from 'rxjs';
 import { Product } from '../../interfaces/product.interface';
 import { ShoppingCartService } from '../../services/shopping-cart.service';
 import { ProductService } from '../../services/product.service';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-products',
