@@ -4,6 +4,7 @@ import { Subject, takeUntil } from 'rxjs';
 import { ShoppingCartService } from '../../services/shopping-cart.service';
 import { ShoppingCartModalComponent } from '../shopping-cart-modal/shopping-cart-modal.component';
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',

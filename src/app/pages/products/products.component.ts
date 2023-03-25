@@ -1,8 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { Product } from '../../interfaces/product.interface';
-import { mockProductsList } from '../../mock/products.mock';
 import { ShoppingCartService } from '../../services/shopping-cart.service';
+import { ProductService } from '../../services/product.service';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-products',
@@ -11,13 +13,16 @@ import { ShoppingCartService } from '../../services/shopping-cart.service';
 })
 export class ProductsComponent implements OnInit, OnDestroy {
 
-  productsList: Product[] = mockProductsList;
   shoppingCartList: Product[] = [];
   unsubscribe$: Subject<null> = new Subject();
+  products: Observable<{[key: string]: Product}> = new Observable();
 
-  constructor(private readonly shoppingCartService: ShoppingCartService) { }
+  constructor(private readonly shoppingCartService: ShoppingCartService,
+              private readonly productService: ProductService
+  ) { }
 
   ngOnInit(): void {
+    this.products = this.productService.getProduct();
     this.shoppingCartService.subject$.pipe(
       takeUntil(this.unsubscribe$)
     ).subscribe(() => {
@@ -27,7 +32,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.unsubscribe$.next(null);
-    this.unsubscribe$.complete();
+    this.unsubscribe$.complete();    
   }
 
   isOnCart(code: string): boolean {
