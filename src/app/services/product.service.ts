@@ -10,7 +10,7 @@ export class ProductService {
   constructor(private readonly http: HttpClient) { }
 
   getProduct(): Observable<{[key: string]: any}> {
-    return this.http.get('https://plasentir-backend-default-rtdb.firebaseio.com/products.json')
+    return this.http.get('https://plasentir-backend-default-rtdb.firebaseio.com/products.json');
   }
 
 }
