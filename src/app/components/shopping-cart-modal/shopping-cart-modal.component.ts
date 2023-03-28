@@ -29,7 +29,9 @@ export class ShoppingCartModalComponent implements OnInit, OnDestroy {
   }
 
   get total(): number {
-    return this.shoppingCartItems.map(item => item.price).reduce((a,b) => a + b);
+    return this.shoppingCartItems.length > 0 
+      ? this.shoppingCartItems.map(item => Number(item.price)).reduce((a,b) => a + b)
+      : 0;
   }
 
   get itemsInCart(): boolean {

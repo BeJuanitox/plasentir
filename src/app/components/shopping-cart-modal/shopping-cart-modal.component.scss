@@ -5,10 +5,12 @@
   justify-content: center;
   min-height: 40vh;
   min-width: 400px;
+  max-height: 700px;
 
   .list {
     list-style: none;
     padding: 0;
+    overflow-y: scroll;
 
     .item {
       align-items: center;
@@ -25,11 +27,11 @@
         width: 190px;
       }
     }
+  }
 
-    .total {
-      display: flex;
-      justify-content: flex-end;
-    }
+  .total {
+    display: flex;
+    justify-content: flex-end;
   }
 
   .empty-cart {

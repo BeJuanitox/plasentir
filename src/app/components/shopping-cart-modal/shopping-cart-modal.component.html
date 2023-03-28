@@ -10,14 +10,12 @@
         </button>
       </li>
     </ng-container>
-    <div class="total">
-      <h2>Total: {{ total | currency}}</h2>
-    </div>
   </ul>
+  <div class="total" *ngIf="itemsInCart">
+    <h2>Total: {{ total | currency}}</h2>
+  </div>
   <ng-template #noItemsTemplate>
-    <!-- <div class="empty-cart"> -->
-      <h1>No hay items agregados al carrito de compras</h1>
-      <h1>:(</h1>
-    <!-- </div> -->
+    <h1>No hay items agregados al carrito de compras</h1>
+    <h1>:(</h1>
   </ng-template>
 </section>
