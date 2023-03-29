@@ -15,14 +15,18 @@ export class ProductsComponent implements OnInit, OnDestroy {
 
   shoppingCartList: Product[] = [];
   unsubscribe$: Subject<null> = new Subject();
-  products: Observable<{[key: string]: Product}> = new Observable();
+  products: Product[] = [];
+  productsOriginal: Product[] = [];
 
   constructor(private readonly shoppingCartService: ShoppingCartService,
               private readonly productService: ProductService
   ) { }
 
   ngOnInit(): void {
-    this.products = this.productService.getProduct();
+  this.productService.getProduct().subscribe(resp => {
+    this.products = Object.values(resp);
+    this.productsOriginal = Object.values(resp);
+  });
     this.shoppingCartService.subject$.pipe(
       takeUntil(this.unsubscribe$)
     ).subscribe(() => {
@@ -44,4 +48,13 @@ export class ProductsComponent implements OnInit, OnDestroy {
     this.shoppingCartService.addRemoveToCart(product);
     this.shoppingCartList = this.shoppingCartService.shoppingCart;
   }
+
+  handleSearch(value: string) {
+    if ( value.trim() === '') {
+      this.products = this.productsOriginal;
+    } else {
+      this.products = this.productsOriginal.filter(product => product.name.toLowerCase().includes(value.toLowerCase()))
+    }
+  }
+
 }

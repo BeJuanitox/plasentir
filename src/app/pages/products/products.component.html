@@ -1,9 +1,7 @@
+<app-search-bar (searchTerm)="handleSearch($event)" ></app-search-bar>
 <section class="products">
-  <ng-container *ngFor="let product of products | async | keyvalue">
-    <app-product-card 
-      [product]="product.value" 
-      [addedToCart]="isOnCart(product.value.code)"
-      (onAddRemoveToCart)="addRemoveToCart($event)"
-    ></app-product-card>
+  <ng-container *ngFor="let product of products">
+    <app-product-card [product]="product" [addedToCart]="isOnCart(product.code)"
+      (onAddRemoveToCart)="addRemoveToCart($event)"></app-product-card>
   </ng-container>
 </section>

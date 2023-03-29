@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { NgModule } from '@angular/core';
 
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -11,24 +12,30 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { ProductsComponent } from './pages/products/products.component';
 
 import { NgMaterialModule } from './ng-material/ng-material.module';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { ShoppingCartModalComponent } from './components/shopping-cart-modal/shopping-cart-modal.component';
+import { SearchPipe } from './pipes/search.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    FooterComponent,
     HeaderComponent,
     ProductCardComponent,
-    FooterComponent,
     ProductsComponent,
+    SearchBarComponent,
+    SearchPipe,
     ShoppingCartModalComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
     NgMaterialModule,
-    AppRoutingModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

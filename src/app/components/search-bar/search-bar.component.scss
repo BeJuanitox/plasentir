@@ -1,0 +1,19 @@
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+
+  .searchBox {
+    width: 25%;
+    height: 55px;
+    border: 2px solid #EBEBEB;
+    border-radius: 15px;
+    padding: 6px;
+
+    .title {
+      color: #AC0404;
+    }
+  }
+}
