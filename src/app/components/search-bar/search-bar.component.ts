@@ -18,6 +18,4 @@ export class SearchBarComponent implements OnInit  {
     this.searchProduct.valueChanges.pipe(debounceTime(300)).subscribe(value => this.searchTerm.emit(value))
   }
 
-  constructor() { }  
-
 }
