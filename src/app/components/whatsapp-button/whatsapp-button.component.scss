@@ -1,0 +1,22 @@
+@import '/src/styles/colors';
+
+.materialButton {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background-color: $Chateau-Green;
+
+
+  .fa-brands {
+    font-size: 40px;
+  } 
+}:hover {
+  .fa-brands {
+    font-size: 43px;
+  }
+}
