@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { WhatsappButtonComponent } from './components/whatsapp-button/whatsapp-button.component';
 import { ProductsComponent } from './pages/products/products.component';
 
 import { NgMaterialModule } from './ng-material/ng-material.module';
@@ -24,7 +25,8 @@ import { ShoppingCartModalComponent } from './components/shopping-cart-modal/sho
     ProductCardComponent,
     ProductsComponent,
     SearchBarComponent,
-    ShoppingCartModalComponent
+    ShoppingCartModalComponent,
+    WhatsappButtonComponent
   ],
   imports: [
     HttpClientModule,
