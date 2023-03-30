@@ -11,12 +11,11 @@
   right: 15px;
   background-color: $Chateau-Green;
 
-
   .fa-brands {
     font-size: 40px;
-  } 
-}:hover {
-  .fa-brands {
+  }
+
+  &:hover .fa-brands {
     font-size: 43px;
   }
 }
