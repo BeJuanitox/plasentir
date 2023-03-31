@@ -1,5 +1,10 @@
 @import '/src/styles/colors';
 
+.titleTopSellers {
+  text-align: center;
+  color: $bright-red;
+}
+
 .carousel-container {
   position: relative;
   margin: auto;
@@ -7,7 +12,7 @@
   width: 700px;
   border: 2px solid $Mercury;
   border-radius: 15px;
-  margin-top: 50px;
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
