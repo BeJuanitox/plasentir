@@ -15,6 +15,7 @@ import { ProductsComponent } from './pages/products/products.component';
 import { NgMaterialModule } from './ng-material/ng-material.module';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { ShoppingCartModalComponent } from './components/shopping-cart-modal/shopping-cart-modal.component';
+import { TopSellersComponent } from './components/top-sellers/top-sellers.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ShoppingCartModalComponent } from './components/shopping-cart-modal/sho
     ProductsComponent,
     SearchBarComponent,
     ShoppingCartModalComponent,
-    WhatsappButtonComponent
+    WhatsappButtonComponent,
+    TopSellersComponent
   ],
   imports: [
     HttpClientModule,

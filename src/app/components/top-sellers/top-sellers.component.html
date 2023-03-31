@@ -1,0 +1,21 @@
+<div *ngIf="productSellers && productSellers.length > 0" class="carousel-container">
+  <button *ngIf="controls" class="btn-carousel btn-prev" (click)="onPrevClick()">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+  <div class="globalContainer">
+    <div *ngFor="let prod of productSellers; let i=index" [ngClass]="{'image-active': selectedIndex === i}"
+      class="productTopSellers">
+      <h1> {{prod.name | titlecase}} </h1>
+      <img [src]="prod.image" alt="ProductName" class="productImage">
+      <h2> {{prod.price}} MXN</h2>
+    </div>
+    <div *ngIf="indicators" class="carousel-dot-container">
+      <span *ngFor="let dot of productSellers; let i=index" class="dot" [ngClass]="{'active': selectedIndex === i}"
+        (click)="selectedProducts(i)">
+      </span>
+    </div>
+  </div>
+  <button *ngIf="controls" class="btn-carousel btn-next" (click)="onNextClick()">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+</div>

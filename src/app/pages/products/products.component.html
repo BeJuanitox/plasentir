@@ -1,3 +1,4 @@
+<app-top-sellers [productSellers]="productTopSellers" [autoSlide]="false"></app-top-sellers>
 <app-search-bar (searchTerm)="handleSearch($event)" ></app-search-bar>
 <section class="products">
   <ng-container *ngFor="let product of products">
