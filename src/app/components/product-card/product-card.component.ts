@@ -1,13 +1,15 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-
+import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { Product } from '../../interfaces/product.interface';
+import { FirebaseService } from '../../services/firebase.service';
 
 @Component({
   selector: 'app-product-card',
   templateUrl: './product-card.component.html',
   styleUrls: ['./product-card.component.scss']
 })
-export class ProductCardComponent {
+export class ProductCardComponent implements OnInit {
+
+  constructor(private firebaseService: FirebaseService) {}
 
   @Input() product: Product = {
     code: '2020',
@@ -19,7 +21,20 @@ export class ProductCardComponent {
   @Input() addedToCart: boolean = false;
   @Output() onAddRemoveToCart: EventEmitter<Product> = new EventEmitter();
 
+  productImage: string = '';
+
+  ngOnInit(): void {
+    this.getFirebaseUrlImage(this.product.image);
+  }
+
   addRemoveToCart(): void {
     this.onAddRemoveToCart.emit(this.product);
+  }
+
+  getFirebaseUrlImage(image: string) {
+    this.firebaseService.getStoredImage(image)
+    .then(url => {
+      this.productImage = url;
+    });
   }
 }
