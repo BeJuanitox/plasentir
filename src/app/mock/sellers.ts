@@ -1,4 +1,6 @@
-export const mockTopSellers = [
+import { TopSellers } from "../interfaces/top-sellers";
+
+export const mockTopSellers: TopSellers[] = [
   {
     code: 'B10099',
     price: 696,

@@ -10,12 +10,12 @@ import { mockTopSellers } from 'src/app/mock/sellers';
 export class TopSellersComponent implements OnInit {
 
   @Input() productSellers: TopSellers[] = mockTopSellers;
-  @Input() indicators = true;
-  @Input() controls = true;
-  @Input() autoSlide = false;
-  @Input() slideInterval = 3000;
+  @Input() indicators: boolean = true;
+  @Input() controls: boolean = true;
+  @Input() autoSlide: boolean = false;
+  @Input() slideInterval: number = 3000;
 
-  selectedIndex = 0;
+  selectedIndex: number = 0;
 
   ngOnInit(): void {
     if (this.autoSlide) {
@@ -33,7 +33,7 @@ export class TopSellersComponent implements OnInit {
     this.selectedIndex = index; 
   }
 
-  onPrevClick(): void {
+  onPreviousClick(): void {
     if (this.selectedIndex === 0) {
       this.selectedIndex = this.productSellers.length - 1;
     } else {
