@@ -1,29 +1,20 @@
 @import '/src/styles/colors';
 
-.title-container {
-  text-align: center;
+.title {
+  color: $bright-red;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-top: 60px;
 
-  .title {
-    color: $bright-red;
-    display: inline-block;
+  &::after, &::before {
+    content: '';
     position: relative;
-  
-    &::after, &::before {
-      content: '';
-      position: absolute;
-      width: 120px;
-      height: 3px;
-      background-color: currentColor;
-      top: 0.6em;
-    }
-
-    &::before {
-      left: -140px;
-    }
-
-    &::after {
-      right: -140px;
-    }
+    width: 120px;
+    height: 3px;
+    background-color: currentColor;
+    top: 0.6em;
+    margin: 0 10px;
   }
 }
 
