@@ -3,7 +3,7 @@ import { Subject, takeUntil } from 'rxjs';
 import { Product } from '../../interfaces/product.interface';
 import { ShoppingCartService } from '../../services/shopping-cart.service';
 import { ProductService } from '../../services/product.service';
-import { Observable } from 'rxjs';
+import { mockTopSellers } from 'src/app/mock/sellers';
 
 
 @Component({
@@ -17,6 +17,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
   unsubscribe$: Subject<null> = new Subject();
   products: Product[] = [];
   productsOriginal: Product[] = [];
+  productTopSellers = mockTopSellers;
 
   constructor(private readonly shoppingCartService: ShoppingCartService,
               private readonly productService: ProductService
