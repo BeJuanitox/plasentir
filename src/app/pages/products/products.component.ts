@@ -4,6 +4,7 @@ import { Product } from '../../interfaces/product.interface';
 import { ShoppingCartService } from '../../services/shopping-cart.service';
 import { ProductService } from '../../services/product.service';
 import { mockTopSellers } from 'src/app/mock/sellers';
+import { PageEvent } from '@angular/material/paginator';
 
 
 @Component({
@@ -56,6 +57,16 @@ export class ProductsComponent implements OnInit, OnDestroy {
     } else {
       this.products = this.productsOriginal.filter(product => product.name.toLowerCase().includes(value.toLowerCase()))
     }
+  }
+
+  pageSize: number = 20;
+  pageNumber: number = 1;
+  pageSizeOptions = [20, 50, 100];
+  hidePageSize: boolean = true;
+
+  handlePage(e: PageEvent) {
+    this.pageSize = e.pageSize;
+    this.pageNumber = e.pageIndex + 1;
   }
 
 }

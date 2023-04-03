@@ -1,7 +1,19 @@
+@import '/src/styles/colors';
+
+.paginator {
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 50px;
+  color: $black;
+  background-color: $white;
+  font-weight: 500;
+}
+
 .products {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   min-height: 100vh;
+  margin-bottom: 80px;
 }
