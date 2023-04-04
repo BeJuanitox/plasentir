@@ -20,21 +20,15 @@
     .name {
       text-align: center;
       overflow-y: hidden;
-      height: 100px;
-    }
-    
-    .description {
-      margin: 0;
-      overflow-y: hidden;
-      text-align: center;
       height: 80px;
+      font-weight: 500;
     }
 
     .price {
       color: $rose-bud;
       font-size: x-large;
       font-weight: bolder;
-      margin-top: 10px;
+      margin-top: 0;
     }
   }
 
