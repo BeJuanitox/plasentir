@@ -17,6 +17,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { ShoppingCartModalComponent } from './components/shopping-cart-modal/shopping-cart-modal.component';
 import { TopSellersComponent } from './components/top-sellers/top-sellers.component';
 import { PaginatePipe } from './pipes/paginate.pipe';
+import { ProductComponent } from './pages/product/product.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { PaginatePipe } from './pipes/paginate.pipe';
     ShoppingCartModalComponent,
     WhatsappButtonComponent,
     TopSellersComponent,
-    PaginatePipe
+    PaginatePipe,
+    ProductComponent
   ],
   imports: [
     HttpClientModule,

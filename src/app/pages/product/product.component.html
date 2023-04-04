@@ -1,0 +1,18 @@
+<section *ngIf="product; else loading" class="product-detail">
+  <img class="preview" [src]="productImage" [alt]="product.code">
+  <div class="details">
+    <h2 class="name">{{product.name}}</h2>
+    <p class="description">{{product.description}}</p>
+    <h3 class="price">{{ product.price | currency }}</h3>
+    <button 
+      mat-flat-button
+      [ngClass]="isOnCart ? 'action disable' : 'action enable'"
+      (click)="addRemoveToCart()"
+    >
+      {{ isOnCart ? 'Remover del carrito' : 'Agregar al carrito' }}
+    </button>
+  </div>
+</section>
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>

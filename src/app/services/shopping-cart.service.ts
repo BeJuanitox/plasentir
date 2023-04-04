@@ -37,4 +37,8 @@ export class ShoppingCartService {
     this.localStorageService.setLocalStorageItem('shopping_cart', this.shoppingCart);
     this.subject$.next(code);
   }
+
+  isOnCart(code: string): boolean {
+    return this.shoppingCart.filter(product => product.code === code).length > 0;
+  }
 }
