@@ -1,0 +1,11 @@
+.product-detail {
+  align-items: flex-start;
+  display: flex;
+  margin: 100px auto;
+  min-height: 50vh;
+  width: 80%;
+
+  .preview {
+    width: 700px;
+  }
+}
