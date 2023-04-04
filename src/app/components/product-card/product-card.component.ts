@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from '../../interfaces/product.interface';
 import { FirebaseService } from '../../services/firebase.service';
 
@@ -9,7 +10,10 @@ import { FirebaseService } from '../../services/firebase.service';
 })
 export class ProductCardComponent implements OnInit {
 
-  constructor(private firebaseService: FirebaseService) {}
+  constructor(
+    private firebaseService: FirebaseService,
+    private readonly router: Router
+  ) {}
 
   @Input() product: Product = {
     code: '2020',
@@ -36,5 +40,9 @@ export class ProductCardComponent implements OnInit {
     .then(url => {
       this.productImage = url;
     });
+  }
+
+  goToDetail(): void {
+    this.router.navigateByUrl(`/product/${this.product.code}`);
   }
 }

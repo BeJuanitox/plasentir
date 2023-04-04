@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 import { ShoppingCartService } from '../../services/shopping-cart.service';
 import { ShoppingCartModalComponent } from '../shopping-cart-modal/shopping-cart-modal.component';
@@ -17,7 +18,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   constructor(
     private readonly shoppingCartService: ShoppingCartService,
-    public readonly dialog: MatDialog
+    private readonly router: Router,
+    public readonly dialog: MatDialog,
   ) { }
   
   ngOnInit(): void {
@@ -36,5 +38,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   showShoppingCart(): void {
     this.dialog.open(ShoppingCartModalComponent);
+  }
+
+  goToProducts(): void {
+    this.router.navigateByUrl('products');
   }
 }
