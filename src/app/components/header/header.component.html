@@ -3,20 +3,13 @@
   <mat-toolbar color="black">
     <span class="example-spacer"></span>
     <div class="example-flex-container">
-      <button class="aboutUs" mat-button>Sobre nosotros</button>
       <button mat-button (click)="showShoppingCart()">
-        <span 
-          [matBadge]="shoppingCartCounter"
-          [matBadgeHidden]="shoppingCartCounter === 0"
-          matBadgeColor="warn"
-          class="icoShoppingCart material-symbols-outlined"
-        >
-        shopping_cart
-      </span>
+        <span [matBadge]="shoppingCartCounter" [matBadgeHidden]="shoppingCartCounter === 0" matBadgeColor="warn"
+          class="icoShoppingCart material-symbols-outlined">
+          shopping_cart
+        </span>
       </button>
-      <button mat-button>
-        <mat-icon>menu</mat-icon>
-      </button>
+      <button [routerLink]="['/about']" class="aboutUs" mat-button>Sobre nosotros</button>
     </div>
   </mat-toolbar>
 </div>

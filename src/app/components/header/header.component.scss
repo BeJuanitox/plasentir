@@ -29,9 +29,10 @@
   .example-flex-container {
     flex-wrap: wrap;
     gap: 15px;
-
+    
     .aboutUs {
       font-size: 16px;
+      color: $white;
     }
   }
 }
