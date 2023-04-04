@@ -1,3 +1,5 @@
+@import '../../../styles/colors';
+
 .product-detail {
   align-items: flex-start;
   display: flex;
@@ -7,5 +9,19 @@
 
   .preview {
     width: 700px;
+  }
+
+  .action {
+    width: 70%;
+  }
+
+  .enable {
+    background-color: $rose-bud;
+    color: $tundora;
+  }
+  
+  .disable {
+    background-color: $tundora;
+    color: $rose-bud;
   }
 }
