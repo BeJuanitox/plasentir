@@ -17,7 +17,11 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { ShoppingCartModalComponent } from './components/shopping-cart-modal/shopping-cart-modal.component';
 import { TopSellersComponent } from './components/top-sellers/top-sellers.component';
 import { PaginatePipe } from './pipes/paginate.pipe';
+<<<<<<< HEAD
+import { AboutComponent } from './pages/about/about.component';
+=======
 import { ProductComponent } from './pages/product/product.component';
+>>>>>>> d839fdcb0dbfc9f9c95385e346dd6dc9b51d6b08
 
 
 @NgModule({
@@ -32,7 +36,11 @@ import { ProductComponent } from './pages/product/product.component';
     WhatsappButtonComponent,
     TopSellersComponent,
     PaginatePipe,
+<<<<<<< HEAD
+    AboutComponent
+=======
     ProductComponent
+>>>>>>> d839fdcb0dbfc9f9c95385e346dd6dc9b51d6b08
   ],
   imports: [
     HttpClientModule,
