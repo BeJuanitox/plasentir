@@ -2,8 +2,7 @@
   <ul class="list" *ngIf="itemsInCart; else noItemsTemplate">
     <ng-container *ngFor="let item of shoppingCartItems">
       <li class="item">
-        <img class="image" src="https://cdn-icons-png.flaticon.com/512/4416/4416740.png" [alt]="item.code">
-        <p class="name">{{item.name}}</p>
+        <p class="name">{{item.name | titlecase}}</p>
         <p>{{item.price | currency}}</p>
         <button mat-button (click)="removeItem(item)">
           <mat-icon>delete</mat-icon>
@@ -21,6 +20,7 @@
       (click)="goToWhatsApp()"
     >
       Continuar compra
+    <i class="fa-brands fa-whatsapp"></i>
     </button>
   </ng-container>
 

@@ -16,7 +16,7 @@ export class ShoppingCartModalComponent implements OnInit, OnDestroy {
 
   whatsAppMessage: string = baseWhatsAppMessage;
 
-  constructor(private readonly shoppingCartService: ShoppingCartService) { }
+  constructor( private readonly shoppingCartService: ShoppingCartService ) { }
 
   ngOnInit(): void {
     this.shoppingCartService.subject$.pipe(
