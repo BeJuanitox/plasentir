@@ -1,14 +1,43 @@
 @import '../../../styles/colors';
 
 .product-detail {
-  align-items: flex-start;
   display: flex;
+  align-items: center;
   margin: 100px auto;
   min-height: 50vh;
   width: 80%;
+  gap: 30px;
 
-  .preview {
-    width: 700px;
+  .image-product {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $Mercury;
+    border-radius: 50px;
+    padding: 20px;
+  }
+
+  .details {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .name {
+      color: $bright-red;
+    }
+    
+    .price {
+      margin-left: 80%;
+    }
+
+    .addTocart {
+      margin-top: 50px;
+      width: 300px;
+      border: 2px solid $Mercury;
+      border-radius: 10px;
+    }
   }
 
   .action {

@@ -2,7 +2,6 @@
   <mat-card-content class="content" (click)="goToDetail()">
     <img class="image" [src]="productImage" [alt]="product.image" />
     <h2 class="name">{{ product.name | titlecase }}</h2>
-    <p class="description">{{ product.description }}</p>
     <h3 class="price">{{ product.price | currency }}</h3>
   </mat-card-content>
   <mat-card-actions>

@@ -6,9 +6,9 @@
   <div class="product-container">
     <div *ngFor="let product  of productSellers; let i=index" [ngClass]="{'image-active': selectedIndex === i}"
       class="product-topSellers">
-      <h1> {{product.name | titlecase}} </h1>
+      <h1 class="name"> {{product.name | titlecase}} </h1>
       <img [src]="product.image" [alt]="product.name" class="product-image">
-      <h2> {{product.price | currency:'MXN'}} </h2>
+      <h2 class="price" > {{product.price | currency:'MXN'}} </h2>
     </div>
     <div *ngIf="indicators" class="carousel-dot-container">
       <span *ngFor="let dot of productSellers; let i=index" class="dot" [ngClass]="{'active': selectedIndex === i}"
