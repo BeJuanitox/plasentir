@@ -1,3 +1,5 @@
+@import '../../../styles/colors';
+
 .modal {
   text-align: center;
   display: flex;
@@ -37,5 +39,12 @@
   .empty-cart {
     text-align: center;
     display: flex;
+  }
+
+  .shop-button {
+    background-color: $rose-bud;
+    color: $tundora;
+    margin: 0 auto;
+    width: 80%;
   }
 }

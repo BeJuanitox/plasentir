@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { ShoppingCartService } from '../../services/shopping-cart.service';
 import { Product } from '../../interfaces/product.interface';
+import { baseBusinessUrl, baseWhatsAppMessage } from './shopping-cart-modal.constants';
 
 @Component({
   selector: 'app-shopping-cart-modal',
@@ -12,6 +13,8 @@ export class ShoppingCartModalComponent implements OnInit, OnDestroy {
 
   shoppingCartItems: Product[] = [];
   unsubscribe$: Subject<null> = new Subject();
+
+  whatsAppMessage: string = baseWhatsAppMessage;
 
   constructor(private readonly shoppingCartService: ShoppingCartService) { }
 
@@ -40,5 +43,20 @@ export class ShoppingCartModalComponent implements OnInit, OnDestroy {
 
   removeItem(item: Product): void {
     this.shoppingCartService.addRemoveToCart(item);
+  }
+
+  goToWhatsApp(): void {
+    this.whatsAppMessage = `
+    ${this.whatsAppMessage}
+    ${this.shoppingCartService.shoppingCart.map((product, i) => `${i+1}] ${this.getMessageByProduct(product)}`).join('')}
+    `;
+    window.open(`${baseBusinessUrl}${encodeURIComponent(this.whatsAppMessage)}`, "_blank");
+  }
+
+  private getMessageByProduct(product: Product): string {
+    return `code: ${product.code}
+        name: ${product.name}
+        ${`http://localhost:4200/product/${product.code}`}
+    `;
   }
 }

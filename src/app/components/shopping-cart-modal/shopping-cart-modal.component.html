@@ -11,9 +11,19 @@
       </li>
     </ng-container>
   </ul>
-  <div class="total" *ngIf="itemsInCart">
-    <h2>Total: {{ total | currency}}</h2>
-  </div>
+  <ng-container *ngIf="itemsInCart">
+    <div class="total">
+      <h2>Total: {{ total | currency}}</h2>
+    </div>
+    <button  
+      class="shop-button"
+      mat-flat-button 
+      (click)="goToWhatsApp()"
+    >
+      Continuar compra
+    </button>
+  </ng-container>
+
   <ng-template #noItemsTemplate>
     <h1>No hay items agregados al carrito de compras</h1>
     <h1>:(</h1>
