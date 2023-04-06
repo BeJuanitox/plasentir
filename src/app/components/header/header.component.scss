@@ -1,7 +1,8 @@
 @import '/src/styles/colors';
+@import '/src/styles/breakpoints';
 
 .headerBar,
-.example-flex-container {
+.options {
   display: flex;
   justify-content: space-between;
 }
@@ -23,14 +24,12 @@
     width: 200px;
   }
 
-  .example-spacer {
-    flex: 1 1 auto;
-  }
+  .options {
+    margin-right: 20px;
 
-  .example-flex-container {
-    flex-wrap: wrap;
-    gap: 15px;
-    
+    .icoShoppingCart {
+      color: $white;
+    }
     .aboutUs {
       font-size: 16px;
       color: $white;
@@ -41,4 +40,12 @@
 .mat-badge-content {
   background: $rose-bud;
   color: $tundora;
+}
+
+@media (max-width: $small) {
+  .headerBar { 
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+  }
 }

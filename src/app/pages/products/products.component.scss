@@ -1,12 +1,13 @@
 @import '/src/styles/colors';
 
 .paginator {
-  width: 350px;
   margin: 0 auto;
   margin-bottom: 50px;
   color: $black;
   background-color: $white;
   font-weight: 500;
+  max-width: 350px;
+  width: 100%;
 }
 
 .products {
