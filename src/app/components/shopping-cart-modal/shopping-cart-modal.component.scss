@@ -45,5 +45,13 @@
     color: $tundora;
     margin: 0 auto;
     width: 80%;
+    border-radius: 8px;
+    
+    .fa-brands {
+      font-size: 20px;
+      font-weight: 600;
+      color: $Chateau-Green;
+      margin-left: 5px;
+    }
   }
 }

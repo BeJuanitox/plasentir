@@ -28,13 +28,19 @@
     .price {
       color: $rose-bud;
       font-size: x-large;
-      font-weight: bolder;
+      font-weight: 500;
       margin-top: 0;
     }
   }
 
   .action {
     width: 100%;
+  }
+
+  .iconAdd, .iconRemove {
+    font-size: 20px;
+    position: absolute;
+    margin-top: 7px;
   }
 
   .enable {

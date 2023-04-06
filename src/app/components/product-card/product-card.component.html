@@ -2,7 +2,7 @@
   <mat-card-content class="content" (click)="goToDetail()">
     <img class="image" [src]="productImage" [alt]="product.image" />
     <h2 class="name">{{ product.name | titlecase }}</h2>
-    <h3 class="price">{{ product.price | currency }}</h3>
+    <h3 class="price">{{ product.price | currency:'MXN'}}</h3>
   </mat-card-content>
   <mat-card-actions>
     <button  
@@ -11,6 +11,8 @@
       (click)="addRemoveToCart()"
       >
       {{ addedToCart ? 'Remover del carrito' : 'Agregar al carrito' }}
+      <mat-icon *ngIf="!addedToCart" class="iconAdd">add</mat-icon>
+      <mat-icon *ngIf="addedToCart" class="iconRemove">remove</mat-icon>
     </button>
   </mat-card-actions>
 </mat-card>
