@@ -5,16 +5,16 @@
     alt="Plasentir"
     (click)="goToProducts()"
   >
-  <mat-toolbar color="black">
-    <span class="example-spacer"></span>
-    <div class="example-flex-container">
-      <button mat-button (click)="showShoppingCart()">
-        <span [matBadge]="shoppingCartCounter" [matBadgeHidden]="shoppingCartCounter === 0" matBadgeColor="warn"
-          class="icoShoppingCart material-symbols-outlined">
-          shopping_cart
-        </span>
-      </button>
-      <button [routerLink]="['/about']" class="aboutUs" mat-button>Sobre nosotros</button>
-    </div>
-  </mat-toolbar>
+  <div class="options">
+    <button mat-button (click)="showShoppingCart()">
+      <span 
+        [matBadge]="shoppingCartCounter" 
+        [matBadgeHidden]="shoppingCartCounter === 0" 
+        matBadgeColor="warn"
+        class="icoShoppingCart material-symbols-outlined">
+        shopping_cart
+      </span>
+    </button>
+    <button [routerLink]="['/about']" class="aboutUs" mat-button>Sobre nosotros</button>
+  </div>
 </div>

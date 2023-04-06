@@ -5,7 +5,8 @@
   cursor: pointer;
   height: auto;
   margin: 20px auto;
-  width: 300px;
+  max-width: 300px;
+  width: 85%;
 
   .content {
     display: flex;

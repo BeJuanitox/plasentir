@@ -1,8 +1,9 @@
 @import '../../../styles/colors';
+@import '../../../styles/breakpoints';
 
 .product-detail {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin: 100px auto;
   min-height: 50vh;
   width: 80%;
@@ -16,6 +17,10 @@
     border: 2px solid $Mercury;
     border-radius: 50px;
     padding: 20px;
+
+    .preview {
+      width: 90%;
+    }
   }
 
   .details {
@@ -34,7 +39,8 @@
 
     .addTocart {
       margin-top: 50px;
-      width: 300px;
+      max-width: 300px;
+      width: 100%;
       border: 2px solid $Mercury;
       border-radius: 10px;
     }
@@ -52,5 +58,17 @@
   .disable {
     background-color: $tundora;
     color: $rose-bud;
+  }
+}
+
+@media (max-width: $medium) {
+  .product-detail {
+    flex-direction: column;
+    align-items: center;
+
+    .image-product,
+    .details {
+      width: 80%;
+    }
   }
 }

@@ -6,5 +6,13 @@
       (onAddRemoveToCart)="addRemoveToCart($event)"></app-product-card>
   </ng-container>  
 </section>
-<mat-paginator [length]="products.length" [pageSize]="pageSize" [hidePageSize]="hidePageSize" [pageSizeOptions]="pageSizeOptions" (page)="handlePage($event)" showFirstLastButtons class="paginator"></mat-paginator>
+<mat-paginator 
+  [length]="products.length" 
+  [pageSize]="pageSize" 
+  [hidePageSize]="hidePageSize" 
+  [pageSizeOptions]="pageSizeOptions" 
+  (page)="handlePage($event)" 
+  showFirstLastButtons 
+  class="paginator">
+</mat-paginator>
 <app-whatsapp-button></app-whatsapp-button>
