@@ -3,6 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { AboutComponent } from "./pages/about/about.component";
 import { ProductComponent } from './pages/product/product.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { PrivacyPolicyComponent } from "./pages/privacy-policy/privacy-policy.component";
 
 export const routes: Routes = [
   {
@@ -12,6 +13,10 @@ export const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'privacy-policy',
+    component: PrivacyPolicyComponent
   },
   {
     path: 'product/:id',

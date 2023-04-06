@@ -9,4 +9,11 @@ export class FooterComponent {
 
   constructor() { }
 
+  scrollTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
+  }
 }

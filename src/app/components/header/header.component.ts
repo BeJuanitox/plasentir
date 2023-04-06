@@ -21,14 +21,14 @@ export class HeaderComponent implements OnInit, OnDestroy {
     private readonly router: Router,
     public readonly dialog: MatDialog,
   ) { }
-  
+
   ngOnInit(): void {
     this.shoppingCartService.initializeShoppingCart();
     this.shoppingCartService.subject$.pipe(
       takeUntil(this.unsubscribe$)
     ).subscribe(() => {
       this.shoppingCartCounter = this.shoppingCartService.shoppingCart.length;
-    });   
+    });
   }
 
   ngOnDestroy(): void {
@@ -42,5 +42,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   goToProducts(): void {
     this.router.navigateByUrl('products');
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
   }
 }
