@@ -51,6 +51,9 @@ export class ShoppingCartModalComponent implements OnInit, OnDestroy {
     ${this.shoppingCartService.shoppingCart.map((product, i) => `${i+1}] ${this.getMessageByProduct(product)}`).join('')}
     `;
     window.open(`${baseBusinessUrl}${encodeURIComponent(this.whatsAppMessage)}`, "_blank");
+    
+    this.shoppingCartService.clearShoppingCart();
+    return window.location.reload();
   }
 
   private getMessageByProduct(product: Product): string {

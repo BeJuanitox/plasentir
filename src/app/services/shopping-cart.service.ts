@@ -41,4 +41,10 @@ export class ShoppingCartService {
   isOnCart(code: string): boolean {
     return this.shoppingCart.filter(product => product.code === code).length > 0;
   }
+
+  clearShoppingCart(): void {
+    this.localStorageService.clearLocalStorage();
+    this.shoppingCart = [];
+  }
+
 }
