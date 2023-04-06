@@ -45,6 +45,7 @@ export class ShoppingCartService {
   clearShoppingCart(): void {
     this.localStorageService.clearLocalStorage();
     this.shoppingCart = [];
+    this.subject$.next('');
   }
 
 }
