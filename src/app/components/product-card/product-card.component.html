@@ -11,8 +11,8 @@
       (click)="addRemoveToCart()"
       >
       {{ addedToCart ? 'Remover del carrito' : 'Agregar al carrito' }}
-      <mat-icon class="iconAdd">add</mat-icon>
-      <mat-icon class="iconRemove">remove</mat-icon>
+      <mat-icon *ngIf="!addedToCart" class="iconAdd">add</mat-icon>
+      <mat-icon *ngIf="addedToCart" class="iconRemove">remove</mat-icon>
     </button>
   </mat-card-actions>
 </mat-card>

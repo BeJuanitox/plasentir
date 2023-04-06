@@ -37,6 +37,7 @@
   }
 
   .iconAdd, .iconRemove {
+    font-size: 20px;
     position: absolute;
     margin-top: 7px;
   }
@@ -44,26 +45,10 @@
   .enable {
     background-color: $rose-bud;
     color: $tundora;
-
-    .iconAdd {
-      font-size: 20px;
-    }
-
-    .iconRemove {
-      font-size: 0px;
-    }
   }
   
   .disable {
     background-color: $tundora;
     color: $rose-bud;
-
-    .iconAdd {
-      font-size: 0px;
-    }
-
-    .iconRemove {
-      font-size: 20px;
-    }
   }
 }
