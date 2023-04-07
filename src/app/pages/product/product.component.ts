@@ -26,6 +26,7 @@ export class ProductComponent implements OnInit {
     const productCode = this.route.snapshot.params['id'];
     this.productService.getProduct(productCode).subscribe(product => {
       this.product = product;
+      this.product.description = JSON.parse( JSON.stringify( this.product.description ) );
       this.getFirebaseUrlImage(product.image);
     });
   }

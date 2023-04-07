@@ -1,18 +1,20 @@
-<app-top-sellers [productSellers]="productTopSellers" [autoSlide]="true"></app-top-sellers>
-<app-search-bar (searchTerm)="handleSearch($event)" ></app-search-bar>
-<section class="products">  
-  <ng-container *ngFor="let product of products | paginate:pageSize:pageNumber">
-    <app-product-card [product]="product" [addedToCart]="isOnCart(product.code)"
-      (onAddRemoveToCart)="addRemoveToCart($event)"></app-product-card>
-  </ng-container>  
-</section>
-<mat-paginator 
-  [length]="products.length" 
-  [pageSize]="pageSize" 
-  [hidePageSize]="hidePageSize" 
-  [pageSizeOptions]="pageSizeOptions" 
-  (page)="handlePage($event)" 
-  showFirstLastButtons 
-  class="paginator">
-</mat-paginator>
-<app-whatsapp-button></app-whatsapp-button>
+<div class="container">
+  <app-top-sellers [productSellers]="productTopSellers" [autoSlide]="true"></app-top-sellers>
+  <app-search-bar (searchTerm)="handleSearch($event)" ></app-search-bar>
+  <section class="products">  
+    <ng-container *ngFor="let product of products | paginate:pageSize:pageNumber">
+      <app-product-card [product]="product" [addedToCart]="isOnCart(product.code)"
+        (onAddRemoveToCart)="addRemoveToCart($event)"></app-product-card>
+    </ng-container>  
+  </section>
+  <mat-paginator 
+    [length]="products.length" 
+    [pageSize]="pageSize" 
+    [hidePageSize]="hidePageSize" 
+    [pageSizeOptions]="pageSizeOptions" 
+    (page)="handlePage($event)" 
+    showFirstLastButtons 
+    class="paginator">
+  </mat-paginator>
+  <app-whatsapp-button></app-whatsapp-button>
+</div>

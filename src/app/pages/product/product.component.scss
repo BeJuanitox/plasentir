@@ -31,11 +31,12 @@
     align-items: center;
 
     .name {
-      color: $bright-red;
+      color: $velvet;
     }
     
     .price {
       margin-left: 80%;
+      color: $velvet;
     }
 
     .addTocart {
@@ -52,13 +53,13 @@
   }
 
   .enable {
-    background-color: $rose-bud;
-    color: $tundora;
+    background-color: $shell;
+    color: $velvet;
   }
   
   .disable {
-    background-color: $tundora;
-    color: $rose-bud;
+    background-color: $silk-warm;
+    color: $velvet;
   }
 }
 

@@ -10,7 +10,7 @@
 .headerBar {
   width: 100%;
   height: 90px;
-  background-color: $mine-shaft;
+  background-color: $velvet;
   flex-direction: row;
   align-items: center;
   position: fixed;
@@ -29,6 +29,11 @@
 
     .icoShoppingCart {
       color: $white;
+
+      .mat-badge-content {
+        background-color: $silk-warm;
+        color: $velvet;
+      }
     }
     .home {
       font-size: 16px;
