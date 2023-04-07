@@ -11,11 +11,11 @@ export const routes: Routes = [
     component: ProductsComponent
   },
   {
-    path: 'sobre-nosotros',
+    path: 'about',
     component: AboutComponent
   },
   {
-    path: 'politica-privacidad',
+    path: 'privacy-policy',
     component: PrivacyPolicyComponent
   },
   {
