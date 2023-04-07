@@ -1,0 +1,23 @@
+@import '/src/styles/colors';
+
+.title {
+  text-align: center;
+  color: $velvet;
+  margin-bottom: 35px;
+  margin-top: 120px;
+}
+
+.about {
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  .subtitle {
+    color: $velvet;
+    margin-top: 60px;
+  }
+
+  .description {
+    line-height: 2;
+  }
+}
