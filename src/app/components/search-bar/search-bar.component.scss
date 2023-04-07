@@ -7,14 +7,18 @@
   width: 100%;
 
   .searchBox {
-    width: 25%;
+    width: 70%;
     height: 55px;
-    border: 2px solid $Mercury;
+    border: 2px solid $velvet;
     border-radius: 15px;
     padding: 6px;
 
     .title {
-      color: $bright-red;
+      color: $velvet;
+    }
+
+    .search-icon {
+      color: $velvet;
     }
   }
 }

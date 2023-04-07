@@ -1,12 +1,13 @@
 @import '/src/styles/colors';
+@import '/src/styles/breakpoints';
 
 .card {
   border-radius: 10px;
+  background-color: $silk-warm;
   cursor: pointer;
   height: auto;
   margin: 20px auto;
-  max-width: 300px;
-  width: 370px;
+  width: 300px;
 
   .content {
     display: flex;
@@ -23,10 +24,11 @@
       overflow-y: hidden;
       height: 80px;
       font-weight: 500;
+      color: $velvet;
     }
 
     .price {
-      color: $rose-bud;
+      color: $velvet;
       font-size: x-large;
       font-weight: 500;
       margin-top: 0;
@@ -44,12 +46,18 @@
   }
 
   .enable {
-    background-color: $rose-bud;
-    color: $tundora;
+    background-color: $shell;
+    color: $velvet;
   }
   
   .disable {
-    background-color: $tundora;
-    color: $rose-bud;
+    background-color: $silk-warm;
+    color: $velvet;
+  }
+}
+
+@media (max-width: $x-small) {
+  .card {
+    width: 230px;
   }
 }

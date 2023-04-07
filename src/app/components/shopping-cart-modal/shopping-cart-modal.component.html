@@ -2,6 +2,7 @@
   <ul class="list" *ngIf="itemsInCart; else noItemsTemplate">
     <ng-container *ngFor="let item of shoppingCartItems">
       <li class="item">
+        <img class="image" [src]="item.image" [alt]="item.code">
         <p class="name">{{item.name | titlecase}}</p>
         <p>{{item.price | currency}}</p>
         <button mat-button (click)="removeItem(item)">

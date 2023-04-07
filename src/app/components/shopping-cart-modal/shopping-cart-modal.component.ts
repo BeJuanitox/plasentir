@@ -3,6 +3,7 @@ import { Subject, takeUntil } from 'rxjs';
 import { ShoppingCartService } from '../../services/shopping-cart.service';
 import { Product } from '../../interfaces/product.interface';
 import { baseBusinessUrl, baseWhatsAppMessage } from './shopping-cart-modal.constants';
+import { FirebaseService } from '../../services/firebase.service';
 
 @Component({
   selector: 'app-shopping-cart-modal',
@@ -16,7 +17,10 @@ export class ShoppingCartModalComponent implements OnInit, OnDestroy {
 
   whatsAppMessage: string = baseWhatsAppMessage;
 
-  constructor( private readonly shoppingCartService: ShoppingCartService ) { }
+  constructor(
+    private readonly shoppingCartService: ShoppingCartService,
+    private readonly firebaseService: FirebaseService
+  ) { }
 
   ngOnInit(): void {
     this.shoppingCartService.subject$.pipe(
@@ -24,6 +28,7 @@ export class ShoppingCartModalComponent implements OnInit, OnDestroy {
     ).subscribe(() => {
       this.shoppingCartItems = this.shoppingCartService.shoppingCart;
     });
+    this.getItemImages();
   }
 
   ngOnDestroy(): void {
@@ -55,6 +60,15 @@ export class ShoppingCartModalComponent implements OnInit, OnDestroy {
     this.shoppingCartService.clearShoppingCart();
   }
 
+  async getItemImages() {
+    this.shoppingCartItems = await Promise.all(this.shoppingCartItems.map(async item => {
+      return {
+        ...item,
+        image: await this.firebaseService.getStoredImage(item.image)
+      }
+    }));
+  }
+    
   private getMessageByProduct(product: Product): string {
     return `code: ${product.code}
         name: ${product.name}

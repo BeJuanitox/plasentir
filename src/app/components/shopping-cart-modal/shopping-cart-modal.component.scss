@@ -25,6 +25,7 @@
 
       .name {
         text-align: left;
+        margin-left: 10px;
         width: 190px;
       }
     }
@@ -33,6 +34,7 @@
   .total {
     display: flex;
     justify-content: flex-end;
+    color: $silk-warm;
   }
 
   .empty-cart {
@@ -41,8 +43,8 @@
   }
 
   .shop-button {
-    background-color: $rose-bud;
-    color: $tundora;
+    background-color: $shell;
+    color: $velvet;
     margin: 0 auto;
     width: 80%;
     border-radius: 8px;
@@ -50,7 +52,7 @@
     .fa-brands {
       font-size: 20px;
       font-weight: 600;
-      color: $Chateau-Green;
+      color: $velvet;
       margin-left: 5px;
     }
   }
