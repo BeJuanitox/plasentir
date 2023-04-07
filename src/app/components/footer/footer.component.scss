@@ -16,13 +16,13 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
     gap: 50px;
     color: $white;
 
     .description, 
-    .socialLink {
+    .socialLink, .aboutUs {
       font-size: 15px;
     }
 
@@ -34,6 +34,13 @@
     .contact {
       display: flex;
       flex-direction: column;
+      gap: 10px;
+
+      .description {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
     }
 
     .location {
@@ -44,15 +51,32 @@
     .socialNetworks {
       display: flex;
       flex-direction: column;
+      gap: 5px;
 
       .socialLink {
         text-decoration: none;
         margin-bottom: 8px;
         color: $white;
+        display: flex;
+        align-items: center;
+        gap: 5px;
 
         .fa-brands {
           font-size: 25px;
         }
+      }
+    }
+
+    .aboutUs {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .aboutUsContainer, .privacyPolicy {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 5px;
       }
     }
   }

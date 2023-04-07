@@ -19,6 +19,7 @@ import { TopSellersComponent } from './components/top-sellers/top-sellers.compon
 import { PaginatePipe } from './pipes/paginate.pipe';
 import { AboutComponent } from './pages/about/about.component';
 import { ProductComponent } from './pages/product/product.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ProductComponent } from './pages/product/product.component';
     TopSellersComponent,
     PaginatePipe,
     AboutComponent,
-    ProductComponent
+    ProductComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     HttpClientModule,

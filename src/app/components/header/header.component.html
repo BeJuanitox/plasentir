@@ -1,20 +1,13 @@
 <div class="headerBar" color="black">
-  <img 
-    class="logoLetters" 
-    src="../../../assets/Logo/Logotipo-Plasentir-Letters-White.png" 
-    alt="Plasentir"
-    (click)="goToProducts()"
-  >
+  <img class="logoLetters" src="../../../assets/Logo/Logotipo-Plasentir-Letters-White.png" alt="Plasentir"
+    (click)="goToProducts()">
   <div class="options">
     <button mat-button (click)="showShoppingCart()">
-      <span 
-        [matBadge]="shoppingCartCounter" 
-        [matBadgeHidden]="shoppingCartCounter === 0" 
-        matBadgeColor="warn"
+      <span [matBadge]="shoppingCartCounter" [matBadgeHidden]="shoppingCartCounter === 0" matBadgeColor="warn"
         class="icoShoppingCart material-symbols-outlined">
         shopping_cart
       </span>
     </button>
-    <button [routerLink]="['/about']" class="aboutUs" mat-button>Sobre nosotros</button>
+    <button class="home" (click)="goToProducts()" mat-button>Inicio</button>
   </div>
 </div>

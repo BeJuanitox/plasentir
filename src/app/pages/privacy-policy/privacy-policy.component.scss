@@ -1,0 +1,25 @@
+@import '/src/styles/colors';
+
+.title {
+  text-align: center;
+  color: $bright-red;
+  margin-bottom: 35px;
+  margin-top: 120px;
+}
+
+.policy {
+  width: 85%;
+  margin: 0 auto;
+
+  .description {
+    line-height: 2;
+  }
+}
+
+.rights {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-size: small;
+  font-weight: 400;
+  text-align: end;
+}

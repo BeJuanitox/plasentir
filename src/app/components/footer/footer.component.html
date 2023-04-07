@@ -19,6 +19,11 @@
       <a class="socialLink" href="https://www.tiktok.com/@plasentirboutiquecancun" target="_blank"> <i class="fa-brands fa-tiktok"></i>
         @plasentirboutiquecancun </a>
     </div>
+    <div class="aboutUs">
+      <h1 class="title">Acerca de</h1>
+      <span [routerLink]="['/about']" class="aboutUsContainer" mat-button (click)="scrollTop()" > <mat-icon>group</mat-icon> Sobre nosotros </span>
+      <span [routerLink]="['/privacy-policy']" class="privacyPolicy" mat-button (click)="scrollTop()" > <mat-icon>verified_user</mat-icon> Políticas de privacidad</span>
+    </div>
   </div>
   <img class="logo" src="../../../assets/Logo/Logotipo-Plasentir.png" alt="PlasentirLogo">
 </footer>
