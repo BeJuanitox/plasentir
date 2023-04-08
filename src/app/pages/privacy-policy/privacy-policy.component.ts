@@ -10,6 +10,10 @@ export class PrivacyPolicyComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
   }
-
 }

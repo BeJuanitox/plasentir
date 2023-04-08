@@ -42,15 +42,14 @@
   }
 }
 
-.mat-badge-content {
-  background: $rose-bud;
-  color: $tundora;
-}
-
 @media (max-width: $small) {
   .headerBar { 
     flex-direction: column;
     justify-content: space-between;
     height: 100px;
+
+    .logoLetters {      
+      margin-top: 15px;
+    }
   }
 }

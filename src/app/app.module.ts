@@ -20,6 +20,7 @@ import { PaginatePipe } from './pipes/paginate.pipe';
 import { AboutComponent } from './pages/about/about.component';
 import { ProductComponent } from './pages/product/product.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
     PaginatePipe,
     AboutComponent,
     ProductComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
+    NotFoundComponent
   ],
   imports: [
     HttpClientModule,
