@@ -1,4 +1,5 @@
 @import '/src/styles/colors';
+@import '/src/styles/breakpoints';
 
 .notFoundContainer {
   background-color: $silk-warm;
@@ -41,5 +42,23 @@
 
   .right {
     margin-top: 200px;
+  }
+}
+
+@media (max-width: $small) {
+  .notFoundContainer {
+    flex-direction: column;
+
+    .left, .right {
+      margin: 0;
+    }
+
+    .left {
+      margin-right: 60%;
+    }
+
+    .right {
+      margin-left: 60%;
+    }
   }
 }
