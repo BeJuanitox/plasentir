@@ -1,7 +1,45 @@
 @import '/src/styles/colors';
 
-.notFound {
+.notFoundContainer {
   background-color: $silk-warm;
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+  width: 100%;
+  height: 75vh;
+  gap: 20px;
+
+  .itemsNotFound {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .title,
+    .oops {
+      margin: 0px;
+      color: $velvet;
+    }
+
+    .title {
+      font-size: 100px;
+    }
+
+    .oops {
+      font-size: 30px;
+      font-weight: 400;
+    }
+  }
+
+  .decorations {
+    width: 80px;
+  }
+
+  .left {
+    margin-bottom: 150px;
+  }
+
+  .right {
+    margin-top: 200px;
+  }
 }
