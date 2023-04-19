@@ -37,7 +37,7 @@ export class ShoppingCartModalComponent implements OnInit, OnDestroy {
   }
 
   get total(): number {
-    return this.shoppingCartItems.length > 0 
+    return this.shoppingCartItems.length > 0
       ? this.shoppingCartItems.map(item => Number(item.price)).reduce((a,b) => a + b)
       : 0;
   }
@@ -56,7 +56,7 @@ export class ShoppingCartModalComponent implements OnInit, OnDestroy {
     ${this.shoppingCartService.shoppingCart.map((product, i) => `${i+1}] ${this.getMessageByProduct(product)}`).join('')}
     `;
     window.open(`${baseBusinessUrl}${encodeURIComponent(this.whatsAppMessage)}`, "_blank");
-    
+
     this.shoppingCartService.clearShoppingCart();
   }
 
@@ -68,11 +68,11 @@ export class ShoppingCartModalComponent implements OnInit, OnDestroy {
       }
     }));
   }
-    
+
   private getMessageByProduct(product: Product): string {
     return `code: ${product.code}
         name: ${product.name}
-        ${`http://localhost:4200/product/${product.code}`}
+        ${`http://plasentir.netlify.app/product/${product.code}`}
     `;
   }
 }
