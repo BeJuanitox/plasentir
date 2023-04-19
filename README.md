@@ -1,9 +1,10 @@
-# Plasentir
+<h1 align="center"> Plasentir Sex Shop Boutique </h1>
 
-Web page for SexShop
+Web page developed with the purpose of illustrating the catalog of products that the store manages and providing information about it.
+
+[Plasentir url](https://plasentir.netlify.app/products)
 
 <hr>
 
-### Urls
-
-[Figma](https://www.figma.com/file/rBrPrA3wMls1S5csh4hrjk/Idea-Plasentir-WebSite?node-id=0-1&t=OuvSDivKmWwuN3Lf-0) - [Instagram](https://www.instagram.com/plasentir/) - [Angular Material](https://material.angular.io/components/categories)
+## Developed with:
+- Angular
