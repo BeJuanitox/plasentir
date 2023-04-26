@@ -28,9 +28,13 @@ export const routes: Routes = [
     component: NotFoundComponent
   },
   {
-    path: '**',
-    redirectTo: '404',
+    path: '',
+    redirectTo: 'products',
     pathMatch: 'full'
+  },
+  {
+    path: '**',
+    redirectTo: '404'
   }
 ];
 
